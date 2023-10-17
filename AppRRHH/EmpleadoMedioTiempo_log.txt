@@ -1,0 +1,9 @@
+Fecha y hora: 2023-10-17 02:55:59
+Nombre: Karla Castro
+Departamento: QA
+Cargo: Manager
+Salario: 78000.0
+Hora diararias: 50
+Precio por horas: 40
+Numero de cuenta Bancaria: 784523955
+Datos del empleado medio tiempo 

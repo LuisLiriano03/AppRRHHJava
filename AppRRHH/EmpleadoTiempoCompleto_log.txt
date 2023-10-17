@@ -1,0 +1,9 @@
+Fecha y hora: 2023-10-17 02:55:59
+Nombre: Mateo Perez
+Departamento: HR
+Cargo: Manager
+Salario: 50000.0
+Hora diararias: 40
+Precio por horas: 30
+Numero de cuenta Bancaria: 2578411
+Datos del empleado tiempo completo
