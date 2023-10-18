@@ -32,7 +32,7 @@ public class EmployeesFuction {
                 78000.0,
                 50,
                 40,
-                784523955);
+                78452395);
         
         PartTimeEmployeeSingleton.getInstance().closeLog();
     }
