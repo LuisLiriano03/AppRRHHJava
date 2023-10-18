@@ -1,0 +1,9 @@
+Date and Time: 2023-10-18 01:15:53
+Name: Karla Castro
+Department: QA
+Position: Manager
+Salary: 78000.0
+Daily Work Hours: 50
+Price Per Hour: 40
+Bank Account Number: 784523955
+
