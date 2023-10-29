@@ -1,18 +1,24 @@
 
 package Test;
 
-import static CreateEmployees.EmployeesFuction.*;
+import static Test.data.FullTimeEmployee;
 
 public class AppRRHH {
     
     public static void main(String[] args) {
         
-        FullTimeEmployeeFuc();
+        int num = 1;
         
-        PartTimeEmployeeFuc();
+        switch(num){
+            case 1:
+                FullTimeEmployee();
+            
+                
+        }
         
-        TemporaryEmployeeFuc();
-       
+        
+        
+        
     }   
     
 }

@@ -1,9 +1,0 @@
-Date and Time: 2023-10-18 01:15:53
-Name: Mateo Perez
-Department: HR
-Position: Manager
-Salary: 50000.0
-Daily Work Hours: 40
-Price Per Hour: 30
-Bank Account Number: 2578411
-

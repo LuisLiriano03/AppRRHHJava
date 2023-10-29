@@ -1,0 +1,26 @@
+2023-10-29 15:47:33Name=sd, Department=sad, Position=asd, Salary=2.0
+2023-10-29 15:48:38
+Name=dsad
+ Department=sdsa
+Position=sad
+Salary=4.0
+2023-10-29 16:03:41
+Name=s
+Department=sad
+Position=sads
+Salary=45.0
+2023-10-29 16:05:40
+Name=sad
+Department=sdad
+Position=asd
+Salary=12.0
+2023-10-29 16:21:37
+Name=sdjhdsajhk
+Department=sdadasd
+Position=saddsa
+Salary=11.0
+2023-10-29 16:23:34
+Name=Vanessa
+Department=RRHH
+Position=ROMPE CORAZONES
+Salary=99999.0
