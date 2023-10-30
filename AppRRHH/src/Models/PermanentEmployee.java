@@ -1,7 +1,6 @@
 
 package Models;
 
-
 public class PermanentEmployee extends Employee{
     
     private int DailyWorkHours;
@@ -46,11 +45,5 @@ public class PermanentEmployee extends Employee{
     public void setBankAccountNumber(int BankAccountNumber){
         this.BankAccountNumber = BankAccountNumber;
     }
-
-    
-
-    
-    
-    
     
 }

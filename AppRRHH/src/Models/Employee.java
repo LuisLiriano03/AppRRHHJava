@@ -1,3 +1,4 @@
+
 package Models;
 
 public class Employee {
@@ -52,15 +53,12 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "" 
-                + "\nName=" + Name 
-                + "\nDepartment=" + Department 
-                + "\nPosition=" + Position 
-                + "\nSalary=" + Salary +"" ;
+        return ""
+                + "\nEmployee data added" 
+                + "\nName: " + Name 
+                + "\nDepartment: " + Department 
+                + "\nPosition: " + Position 
+                + "\nSalary: " + Salary +"" ;
     }
-
-    
-
-    
     
 }

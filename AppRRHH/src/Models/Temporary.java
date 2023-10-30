@@ -37,5 +37,4 @@ public class Temporary extends Employee {
         this.PricePerHour = PricePerHour;
     } 
     
-    
 }

@@ -28,7 +28,7 @@ public class LogEmployees {
 
     public void logEmployeeCreation(Employee employee) {
         Date date = new Date();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("\nyyyy-MM-dd HH:mm:ss");
         String logEntry = dateFormat.format(date) + employee.toString();
 
         try {
@@ -51,5 +51,4 @@ public class LogEmployees {
         }
     }
 
-    
 }

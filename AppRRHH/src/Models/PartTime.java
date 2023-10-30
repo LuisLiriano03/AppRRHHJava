@@ -1,8 +1,6 @@
 
 package Models;
 
-
-
 public class PartTime extends PermanentEmployee {
     
     public PartTime(){
