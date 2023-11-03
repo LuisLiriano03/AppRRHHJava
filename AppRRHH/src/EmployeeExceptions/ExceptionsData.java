@@ -6,9 +6,11 @@ import java.util.Scanner;
 public class ExceptionsData {
     
     public static int AskForNumber() {
+        
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
+            
             String input = scanner.nextLine();
 
             try {
@@ -17,13 +19,17 @@ public class ExceptionsData {
             } catch (NumberFormatException e) {
                 System.out.println("Invalid value, please enter a Number.");
             }
+            
         }
+        
     }
     
     public static double AskForDouble() {
+        
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
+            
             String input = scanner.nextLine();
 
             try {
@@ -32,13 +38,17 @@ public class ExceptionsData {
             } catch (NumberFormatException e) {
                 System.out.println("Invalid value, please enter a Number. decimal.");
             }
+            
         }
+        
     }
     
     public static String RequestTheText() {
+        
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
+            
             String input = scanner.nextLine();
 
             if (esTextoValido(input)) {
@@ -47,6 +57,7 @@ public class ExceptionsData {
                 System.out.println("Invalid value, please enter a Text.");
             }
         }
+        
     }
 
     public static boolean esTextoValido(String input) {

@@ -7,10 +7,10 @@ public class FullTime extends PermanentEmployee{
         
     }
     
-    public FullTime(String Name, String Department, String Position, double Salary, 
+    public FullTime(int IdentificationCard,String Name, String Department, String Position, double Salary, 
             int DailyWorkHours, int PricePerHour, int BankAccountNumber) {
         
-        super(Name, Department, Position, Salary, DailyWorkHours, PricePerHour, BankAccountNumber);
+        super(IdentificationCard,Name, Department, Position, Salary, DailyWorkHours, PricePerHour, BankAccountNumber);
         
     }
     

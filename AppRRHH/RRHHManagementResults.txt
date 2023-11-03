@@ -1,0 +1,12 @@
+
+ID: 845971002
+Vacation start date: 2023-11-25
+Vacation End Date: 2023-12-16
+
+ID: 845971002
+Vacation leave date: 2023-11-25
+Vacation leave successfully granted.
+
+ID: 845971002
+Because of the dismissal: He's always late and never completes his role
+Has been fired.

@@ -11,10 +11,10 @@ public class PermanentEmployee extends Employee{
         
     }
     
-    public PermanentEmployee(String Name, String Department, String Position, double Salary,
+    public PermanentEmployee(int IdentificationCard, String Name, String Department, String Position, double Salary,
             int DailyWorkHours, int PricePerHour, int BankAccountNumber) {
         
-        super(Name, Department, Position, Salary);
+        super(IdentificationCard, Name, Department, Position, Salary);
         
         this.DailyWorkHours = DailyWorkHours;
         this.PricePerHour = PricePerHour;

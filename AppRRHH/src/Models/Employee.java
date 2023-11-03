@@ -3,6 +3,7 @@ package Models;
 
 public class Employee {
 
+    private int IdentificationCard;
     private String Name;
     private String Department;
     private String Position;
@@ -11,12 +12,25 @@ public class Employee {
     public Employee(){
         
     }
+    
+    public Employee(int IdentificationCard){
+        this.IdentificationCard = IdentificationCard;
+    }
 
-    public Employee(String Name, String Department, String Position, double Salary) {
+    public Employee(int IdentificationCard, String Name, String Department, String Position, double Salary) {
+        this.IdentificationCard = IdentificationCard;
         this.Name = Name;
         this.Department = Department;
         this.Position = Position;
         this.Salary = Salary;
+    }
+    
+    public int getIdentificationCard(){
+        return this.IdentificationCard;
+    }
+    
+    public void setIdentificationCard(int IdentificationCard){
+        this.IdentificationCard = IdentificationCard;
     }
 
     public String getName() {

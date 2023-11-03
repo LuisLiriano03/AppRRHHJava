@@ -1,5 +1,5 @@
 
-package EmployeeData;
+package DataaAndRegistration;
 
 import EmployeesFactory.EmployeeFactory;
 import EmployeesSingleton.LogEmployees;
@@ -10,11 +10,15 @@ import static EmployeeExceptions.ExceptionsData.*;
 public class CreateData {
     
     public static void FullTimeEmployee(){
+        
         LogEmployees logger = LogEmployees.getInstance();
 
         EmployeeFactory factory = new EmployeeFactory();
         
         System.out.println("Data Employee Full-Time\n");
+        
+        System.out.println("Enter employees' ID:");
+        int IdentificationCard = AskForNumber();
 
         System.out.println("Enter the employee's name:");
         String Name = RequestTheText();
@@ -47,14 +51,19 @@ public class CreateData {
         logger.logEmployeeCreation(employee);
 
         logger.closeLogger();
+        
     }
     
     public static void PartTimeEmployee(){
+        
         LogEmployees logger = LogEmployees.getInstance();
 
         EmployeeFactory factory = new EmployeeFactory();
         
         System.out.println("Data Employee Part-Time\n");
+        
+        System.out.println("Enter employees' ID:");
+        int IdentificationCard = AskForNumber();
 
         System.out.println("Enter the employee's name:");
         String Name = RequestTheText();
@@ -87,14 +96,19 @@ public class CreateData {
         logger.logEmployeeCreation(employee);
 
         logger.closeLogger();
+        
     }
     
     public static void TemporaryEmployee(){
+        
         LogEmployees logger = LogEmployees.getInstance();
 
         EmployeeFactory factory = new EmployeeFactory();
         
-        System.out.println("Data Employee Temporary\n");
+        System.out.println("Data Temporary Employee\n");
+        
+        System.out.println("Enter employees' ID:");
+        int IdentificationCard = AskForNumber();
 
         System.out.println("Enter the employee's name:");
         String Name = RequestTheText();
@@ -124,5 +138,6 @@ public class CreateData {
         logger.logEmployeeCreation(employee);
 
         logger.closeLogger();
+        
     }
 }

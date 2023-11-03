@@ -2,6 +2,7 @@
 package EmployeesFactory;
 
 import Models.*;
+import static Models.TypeEmployee.*;
 
 public class EmployeeFactory {
     
@@ -9,7 +10,8 @@ public class EmployeeFactory {
         return switch (typeEmployee){
             case FULLTIME -> new FullTime();
             case PARTTIME -> new PartTime();
-            default -> new Temporary();
+            case TEMPORARY -> new Temporary();
+            default -> null;
         };
     }
 }

@@ -13,7 +13,7 @@ public class LogEmployees {
 
     private LogEmployees() {
         try {
-            fileWriter = new FileWriter("employee_log.txt", true);
+            fileWriter = new FileWriter("Employee_log.txt", true);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -7,10 +7,10 @@ public class PartTime extends PermanentEmployee {
     
     }
     
-    public PartTime(String Name, String Department, String Position, double Salary, 
+    public PartTime(int IdentificationCard,String Name, String Department, String Position, double Salary, 
             int DailyWorkHours, int PricePerHour, int BankAccountNumber) {
         
-        super(Name, Department, Position, Salary, DailyWorkHours, PricePerHour, BankAccountNumber);
+        super(IdentificationCard,Name, Department, Position, Salary, DailyWorkHours, PricePerHour, BankAccountNumber);
         
     }
 }

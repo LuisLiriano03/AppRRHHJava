@@ -1,8 +1,7 @@
 
 package Test;
-
 import static EmployeeExceptions.ExceptionsData.AskForNumber;
-import static EmployeeData.CreateData.*;
+import static RequestMenus.Menu.*;
 
 public class AppRRHH {
     
@@ -13,38 +12,33 @@ public class AppRRHH {
         while(Again){
             
             System.out.println("\nOptions" + "\n"
-                + "\n1 - Full-Time"
-                + "\n2 - Part-Time"
-                + "\n3 - Temporary"
-                + "\n4 - Exit application");
+                + "\n1 - Add new Employee"
+                + "\n2 - Employee requests"
+                + "\n3 - Exit application");
         
-            System.out.println("\nEnter a number:");
+            System.out.println("\nEnter a Options:");
             
-            int num = AskForNumber();
+            int Options = AskForNumber();
             
-            switch(num){
+            switch(Options){
                 case 1:
-                    FullTimeEmployee();
+                    AddEmployee();
                     Again = false;
                     break;
                 case 2:
-                    PartTimeEmployee();
+                    EmployeeRequests();
                     Again = false;
                     break;
                 case 3:
-                    TemporaryEmployee();
-                    Again = false;
-                    break;
-                case 4:
                     System.out.println("Exit application.");
                     return;
                 default:
                     System.out.println("Invalid option, please select a valid option.");
                     break;
+                    
             }
             
         }
         
-    }   
-    
+    } 
 }

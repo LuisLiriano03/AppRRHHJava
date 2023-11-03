@@ -12,10 +12,10 @@ public class Temporary extends Employee {
         
     }
     
-    public Temporary(String Name, String Department, String Position, 
+    public Temporary(int IdentificationCard, String Name, String Department, String Position, 
             double Salary, int DailyWorkHours, int PricePerHour) {
         
-        super(Name, Department, Position, Salary);
+        super(IdentificationCard, Name, Department, Position, Salary);
         
         this.DailyWorkHours = DailyWorkHours;
         this.PricePerHour = PricePerHour;
