@@ -1,5 +1,5 @@
 
-package RRHHOperations;
+package Models;
 
 import Models.Employee;
 
