@@ -4,7 +4,7 @@ package ApplicationVacation;
 import Models.VacationRequestPermission;
 import Models.Vacation;
 import Models.Dismissal;
-import static DataaAndRegistration.LogOperationsPersonnel.writeToFile;
+import static ApplicationVacation.LogOperationsPersonnel.writeToFile;
 import static EmployeeExceptions.ExceptionsData.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

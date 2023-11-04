@@ -2,7 +2,7 @@
 package RequestMenus;
 
 import static ApplicationVacation.OperationsPersonnel.*;
-import static DataaAndRegistration.CreateData.*;
+import static EmployeeData.CreateData.*;
 import static EmployeeExceptions.ExceptionsData.AskForNumber;
 
 public class Menu {
