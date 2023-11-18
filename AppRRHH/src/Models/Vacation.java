@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class Vacation extends Employee{
     private LocalDate Startdate;
     private int VacationDuration;
-
+    
     public Vacation(int IdentificationCard, LocalDate Startdate, int VacationDuration) {
         super(IdentificationCard);
         this.Startdate = Startdate;

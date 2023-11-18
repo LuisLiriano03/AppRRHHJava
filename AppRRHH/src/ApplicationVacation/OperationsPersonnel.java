@@ -1,92 +1,95 @@
 
 package ApplicationVacation;
 
-import Models.VacationRequestPermission;
-import Models.Vacation;
-import Models.Dismissal;
-import static ApplicationVacation.LogOperationsPersonnel.writeToFile;
+import EmployeFacade.EmployeeActionsFacade;
+
 import static EmployeeExceptions.ExceptionsData.*;
+import EmployeesSingleton.LogEmployees;
+import Models.Vacation;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class OperationsPersonnel {
-    
-    public static void VacationRequest(){
-        
+    private static EmployeeActionsFacade employeeActionsFacade = new EmployeeActionsFacade();
+    private static LogEmployees logEmployees = LogEmployees.getInstance();
+    public static void VacationRequest() {
         Scanner scanner = new Scanner(System.in);
-        
-        LocalDate Startdate;
-        int VacationDuration;
-        
+
+        LocalDate startDate;
+        int vacationDuration;
+
         System.out.print("Enter the employee's ID: ");
-        int IdentificationCard = AskForNumber();
-        
+        int identificationCard = AskForNumber();
+
         System.out.print("Enter the vacation start date (yyyy-MM-dd): ");
-        String StartdateStr = scanner.nextLine();
-        Startdate = LocalDate.parse(StartdateStr, DateTimeFormatter.ISO_LOCAL_DATE);
+        String startDateStr = scanner.nextLine();
+        startDate = LocalDate.parse(startDateStr, DateTimeFormatter.ISO_LOCAL_DATE);
 
         System.out.print("Enter the duration of the vacation in days: ");
-        VacationDuration = AskForNumber();
+        vacationDuration = AskForNumber();
 
-        Vacation vacation = new Vacation(IdentificationCard, Startdate, VacationDuration);
-
+        employeeActionsFacade.requestVacation(identificationCard, startDate, vacationDuration);
+        System.out.println("Vacation request submitted.");
+        
+        Vacation vacation = new Vacation(identificationCard, startDate, vacationDuration);
         LocalDate VacationEndDate = vacation.getCalcularFechaFinalizacion();
-        writeToFile("\nID: "  + IdentificationCard);
-        writeToFile("Vacation start date: " + Startdate.format(DateTimeFormatter.ISO_LOCAL_DATE));
-        writeToFile("Vacation End Date: " + VacationEndDate.format(DateTimeFormatter.ISO_LOCAL_DATE));
         
+        String logEntry = "\nVacation Request"
+                +"\nEmployee ID: " + identificationCard +
+                "\nStart Date: " + startDate +
+                "\nDuration: " + vacationDuration + " days"
+                +"\nEnd Date: " + VacationEndDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
+        
+        logEmployees.writeToFile(logEntry);
     }
-   
-    public static void RequestPermission(){
-        
+
+    public static void RequestPermission() {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.print("Enter the employee's ID: ");
-        int IdentificationCard = AskForNumber();
+        int identificationCard = AskForNumber();
 
         System.out.println("Employee data:");
-        System.out.println("ID: " + IdentificationCard);
-        
-        System.out.print("Enter the date of the vacation leave (yyyy-MM-dd): ");
-        String StartdateStr = scanner.nextLine();
-        LocalDate VacationLeaveDate = LocalDate.parse(StartdateStr, DateTimeFormatter.ISO_LOCAL_DATE);
-        
-        VacationRequestPermission vacationRequestPermission = new VacationRequestPermission(IdentificationCard, 
-                VacationLeaveDate);
+        System.out.println("ID: " + identificationCard);
 
-        writeToFile("\nID: "  + IdentificationCard);
-        writeToFile("Vacation leave date: " + StartdateStr);
-        writeToFile("Vacation leave successfully granted.");
+        System.out.print("Enter the date of the vacation leave (yyyy-MM-dd): ");
+        String startDateStr = scanner.nextLine();
+        LocalDate vacationLeaveDate = LocalDate.parse(startDateStr, DateTimeFormatter.ISO_LOCAL_DATE);
+
+        employeeActionsFacade.requestPermission(identificationCard, vacationLeaveDate);
+        System.out.println("Permission request submitted.");
         
+        String logEntry = "\nPermission Request"
+                +"\nEmployee ID: " + identificationCard +
+                "\nRequested Date: " + vacationLeaveDate;
+        logEmployees.writeToFile(logEntry);
     }
     
-    
-    public static void EmployeeDismissal(){
-
+    public static void EmployeeDismissal() {
+        EmployeeActionsFacade employeeActionsFacade = new EmployeeActionsFacade();
         System.out.print("Enter the employee's ID: ");
-        int IdentificationCard = AskForNumber();
+        int identificationCard = AskForNumber();
 
         System.out.println("Employee data:");
-        System.out.println("Cédula: " + IdentificationCard);
+        System.out.println("ID: " + identificationCard);
 
         System.out.print("Enter the reason for dismissal: ");
-        String ReasonForDismissal = RequestTheText();
-
-        Dismissal empleado = new Dismissal(IdentificationCard, ReasonForDismissal);
-        empleado.setReasonForDismissal(ReasonForDismissal);
+        String reasonForDismissal = RequestTheText();
 
         System.out.print("Are you sure about firing this employee? (y/n): ");
-        String confirmacion = RequestTheText();
-        
-        if (confirmacion.equalsIgnoreCase("y")) {
-            writeToFile("\nID: "  + IdentificationCard);
-            writeToFile("Because of the dismissal: "+ ReasonForDismissal + "\nHas been fired.");
+        String confirmation = RequestTheText();
+
+        if (confirmation.equalsIgnoreCase("y")) {
+            employeeActionsFacade.initiateDismissal(identificationCard, reasonForDismissal);
+            System.out.println("Dismissal request initiated.");
+            String logEntry = "\nDismissal Request"
+                    +"\nEmployee ID: " + identificationCard +
+                    "\nReason: " + reasonForDismissal;
+            logEmployees.writeToFile(logEntry);
         } else {
-            writeToFile("\nCedula: "  + IdentificationCard);
-            writeToFile("Because of the dismissal: "+ ReasonForDismissal + "\nThe dismissal has been canceled.\n");
+            System.out.println("Dismissal request canceled.");
         }
-        
     }
     
 }

@@ -42,6 +42,20 @@ public class LogEmployees {
             closeLogger();
         }
     }
+    
+    public void writeToFile(String logEntry) {
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("\nyyyy-MM-dd HH:mm:ss");
+        logEntry = dateFormat.format(date) + logEntry;
+
+        try {
+            fileWriter.write(logEntry + "\n");
+            fileWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void closeLogger() {
         try {

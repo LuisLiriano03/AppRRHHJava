@@ -1,7 +1,47 @@
 
-2023-11-03 01:38:14
+2023-11-17 23:10:49
 Employee data added
-Name: Luis
-Department: QA
-Position: Manager
-Salary: 7800.0
+Name: null
+Department: null
+Position: null
+Salary: 0.0
+
+2023-11-17 23:43:07Vacation Request - Employee ID: 215, Start Date: 2015-10-23, Duration: 2 days
+
+2023-11-17 23:43:55Vacation Request
+ Employee ID: 21321, 
+Start Date: 2023-10-10, 
+Duration: 2 days
+
+2023-11-18 00:03:52
+Vacation Request
+ Employee ID: 231
+Start Date: 2010-10-10
+Duration: 5 days
+
+2023-11-18 00:05:01
+Vacation Request
+ Employee ID: 1231
+Start Date: 2010-10-10
+Duration: 5 days
+End Date: " + endDate
+
+2023-11-18 00:05:47
+Vacation Request
+ Employee ID: 2123
+Start Date: 2010-10-10
+Duration: 5 days
+End Date: 2010-10-15
+
+2023-11-18 00:08:14
+Vacation Request
+Employee ID: 21112132
+Start Date: 2010-10-10
+Duration: 6 days
+End Date: 2010-10-16
+
+2023-11-18 00:11:45Permission Request - Employee ID: 2312, Requested Date: 2010-10-10
+
+2023-11-18 00:15:39Dismissal Request
+Employee ID: 23132
+Reason: He smoking weed all time
